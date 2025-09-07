@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+  <title>Flappy Rajini</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div id="game-container">
+    <div id="game-header">
+      <h1>Flappy Rajini</h1>
+      <button id="music-toggle" class="music-btn">Music: ON</button>
+    </div>
+    <div id="game-wrapper">
+      <canvas id="game"></canvas>
+      <div id="hud">
+        <div id="score">0</div>
+        <div id="best-score">Best: 0</div>
+        <div id="message">Tap to Start Flying!</div>
+      </div>
+      <button id="restart" class="btn">Play Again</button>
+      <div id="mobile-hint">Tap anywhere to flap!</div>
+    </div>
+  </div>
+  
+  <!-- Preload images -->
+  <img id="birdSprite" src="bird.png" alt="Bird" hidden>
+  <img id="birdSpriteOut" src="bird-out.png" alt="Bird Out" hidden>
+
+  <!-- Audio files -->
+  <audio id="sndStart" src="start.mp3" preload="auto"></audio>
+  <audio id="sndPass" src="bird-passed.mp3" preload="auto"></audio>
+  <audio id="sndOut" src="bird-out.mp3" preload="auto"></audio>
+  <audio id="bgMusic" loop preload="auto">
+    <source src="https://dl.masswala.com/Rajini/Baasha/StyleU_StyleU_Dhaan_Idhu_Super_[MassWala.Com].mp3" type="audio/wav">
+    <!-- Fallback source -->
+    <source src="https://dl.masswala.com/Rajini/Baasha/Baasha_Paru_Sad_Version_[MassWala.Com].mp3" type="audio/mpeg">
+  </audio>
+
+  <script src="script.js"></script>
+</body>
+</html>
